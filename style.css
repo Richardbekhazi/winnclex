@@ -51,6 +51,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 1rem;
 }
 
 .nav-logo {
@@ -59,6 +60,40 @@ body {
     color: var(--primary-color);
     text-decoration: none;
     white-space: nowrap;
+}
+
+/* Language Switcher */
+.language-switcher {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.lang-btn {
+    padding: 0.4rem 0.8rem;
+    background-color: var(--light-gray-color);
+    color: var(--text-color);
+    border: 2px solid transparent;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.85rem;
+    transition: all 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+}
+
+.lang-btn:hover,
+.lang-btn:focus {
+    background-color: var(--secondary-color);
+    color: var(--white-color);
+    border-color: var(--secondary-color);
+    outline: none;
+}
+
+.lang-btn.active {
+    background-color: var(--secondary-color);
+    color: var(--white-color);
+    border-color: var(--secondary-color);
 }
 
 .nav-list {
@@ -441,6 +476,10 @@ footer {
     .nav-list {
         display: none;
     }
+
+    .language-switcher {
+        order: 2;
+    }
     
     .hero {
         padding: 8rem 1rem 4rem;
@@ -517,4 +556,49 @@ footer {
         animation-iteration-count: 1 !important;
         transition-duration: 0.01ms !important;
     }
+}
+
+/* RTL Support */
+html[dir="rtl"] {
+    text-align: right;
+}
+
+html[dir="rtl"] .check-list li {
+    padding-left: 0;
+    padding-right: 2rem;
+}
+
+html[dir="rtl"] .check-list li::before {
+    left: auto;
+    right: 0;
+}
+
+html[dir="rtl"] .topic-card ul li {
+    padding-left: 0;
+    padding-right: 1.5rem;
+}
+
+html[dir="rtl"] .topic-card ul li::before {
+    left: auto;
+    right: 0;
+}
+
+html[dir="rtl"] .grid-2 {
+    direction: rtl;
+}
+
+html[dir="rtl"] .hero-content {
+    text-align: center;
+}
+
+html[dir="rtl"] .languages {
+    text-align: right;
+}
+
+html[dir="rtl"] .form-group label {
+    text-align: right;
+}
+
+html[dir="rtl"] .footer-content {
+    text-align: right;
 }
