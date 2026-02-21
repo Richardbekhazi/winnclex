@@ -147,9 +147,12 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (validateForm()) {
                     this.submit();
                 }
-            } catch (error) {
+                } catch (error) {
                 console.error('Form submission error:', error);
-                showFormError('An error occurred. Please try again.');
+                const errorMsg = currentLanguage === 'ar' ? 'حدث خطأ. يُرجى المحاولة مرة أخرى.' :
+                                 currentLanguage === 'fr' ? "Une erreur est survenue. Veuillez réessayer." :
+                                 'An error occurred. Please try again.';
+                showFormError(errorMsg);
             }
         });
 
@@ -200,9 +203,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
         clearFieldError(field);
 
-        if (field.id === 'name') {
+            if (field.id === 'name') {
             if (value.length < 2) {
-                const errorMsg = currentLanguage === 'ar' ? 'يجب أن يكون الاسم 2 أحرف على الأقل' :
+                const errorMsg = currentLanguage === 'ar' ? 'يجب أن يتكون الاسم من حرفين على الأقل' :
                                  currentLanguage === 'fr' ? 'Le nom doit contenir au moins 2 caractères' :
                                  'Name must be at least 2 characters';
                 showFieldError(field, errorMsg);
@@ -210,7 +213,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         } else if (field.id === 'email') {
             if (!isValidEmail(value)) {
-                const errorMsg = currentLanguage === 'ar' ? 'يرجى إدخال عنوان بريد إلكتروني صحيح' :
+                const errorMsg = currentLanguage === 'ar' ? 'يرجى إدخال عنوان بريد إلكتروني صالح' :
                                  currentLanguage === 'fr' ? 'Veuillez entrer une adresse e-mail valide' :
                                  'Please enter a valid email address';
                 showFieldError(field, errorMsg);
@@ -218,7 +221,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         } else if (field.id === 'message') {
             if (value.length < 10) {
-                const errorMsg = currentLanguage === 'ar' ? 'يجب أن تكون الرسالة 10 أحرف على الأقل' :
+                const errorMsg = currentLanguage === 'ar' ? 'يجب أن تتكون الرسالة من 10 أحرف على الأقل' :
                                  currentLanguage === 'fr' ? 'Le message doit contenir au moins 10 caractères' :
                                  'Message must be at least 10 characters';
                 showFieldError(field, errorMsg);
@@ -310,12 +313,12 @@ function updateFormPlaceholders(lang) {
         name: {
             en: 'Your Name',
             fr: 'Votre Nom',
-            ar: 'اسمك'
+            ar: 'الاسم الكامل'
         },
         email: {
             en: 'Your Email',
             fr: 'Votre Email',
-            ar: 'بريدك الإلكتروني'
+            ar: 'البريد الإلكتروني'
         },
         message: {
             en: 'Your Message',
