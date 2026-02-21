@@ -7,6 +7,7 @@
     <meta name="theme-color" content="#0a4d90">
     <title data-en="Global NCLEX Prep | Smart & Strategy Approach" data-fr="Préparation NCLEX Mondiale | Approche Intelligente et Stratégique" data-ar="التحضير الشامل لاختبار NCLEX — منهج استراتيجي وعملي">Global NCLEX Prep | Smart & Strategy Approach</title>
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/svg-animations.css">
 </head>
 <body>
 
@@ -24,7 +25,33 @@
             <!-- Premium Language Selector -->
             <div class="language-selector">
                 <button class="language-toggle" aria-label="Select Language" aria-haspopup="menu">
-                    <span class="lang-icon">🌐</span>
+                    <span class="lang-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" style="overflow:visible;width:24px;height:24px">
+                            <defs>
+                                <radialGradient id="g-body" cx="30%" cy="30%" r="70%">
+                                    <stop offset="0%" stop-color="#38bdf8"/>
+                                    <stop offset="60%" stop-color="#0284c7"/>
+                                    <stop offset="100%" stop-color="#0f172a"/>
+                                </radialGradient>
+                                <linearGradient id="o-ring" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" stop-color="#bae6fd" stop-opacity="0.9"/>
+                                    <stop offset="50%" stop-color="#38bdf8" stop-opacity="0.2"/>
+                                    <stop offset="100%" stop-color="#bae6fd" stop-opacity="0.9"/>
+                                </linearGradient>
+                            </defs>
+                            <ellipse cx="50" cy="95" rx="25" ry="6" fill="#000" style="animation:float-shadow 4s ease-in-out infinite"/>
+                            <g style="animation:float 4s ease-in-out infinite">
+                                <circle cx="50" cy="50" r="35" fill="url(#g-body)"/>
+                                <g style="transform-origin:50px 50px;animation:spin-slow 12s linear infinite">
+                                    <ellipse cx="50" cy="50" rx="15" ry="35" fill="none" stroke="#e0f2fe" stroke-width="1.5" opacity="0.3"/>
+                                    <ellipse cx="50" cy="50" rx="35" ry="15" fill="none" stroke="#e0f2fe" stroke-width="1.5" opacity="0.3"/>
+                                </g>
+                                <path d="M 22 30 Q 50 5 78 30 A 35 35 0 0 0 22 30" fill="#fff" opacity="0.15"/>
+                                <ellipse cx="50" cy="50" rx="48" ry="16" fill="none" stroke="url(#o-ring)" stroke-width="2" transform="rotate(-20 50 50)"/>
+                                <circle cx="10" cy="35" r="4" fill="#fff" style="animation:pulse-glow 2s infinite alternate"/>
+                            </g>
+                        </svg>
+                    </span>
                     <span class="lang-label" data-en="English" data-fr="Français" data-ar="العربية">English</span>
                     <span class="lang-dropdown-arrow">▼</span>
                 </button>

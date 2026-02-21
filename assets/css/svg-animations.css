@@ -1,0 +1,38 @@
+/* SVG Animation Keyframes for Language Icon */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+@keyframes float-shadow {
+    0%, 100% {
+        opacity: 0.5;
+    }
+    50% {
+        opacity: 0.2;
+    }
+}
+
+@keyframes spin-slow {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes pulse-glow {
+    0% {
+        r: 4px;
+        opacity: 1;
+    }
+    100% {
+        r: 6px;
+        opacity: 0.3;
+    }
+}
