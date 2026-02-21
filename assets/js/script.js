@@ -333,6 +333,21 @@ function updateFormPlaceholders(lang) {
             element.placeholder = placeholderMap[id][lang];
         }
     });
+
+    // Clear all form validation errors when language switches
+    const errorElements = document.querySelectorAll('.error-message');
+    errorElements.forEach(el => {
+        el.textContent = '';
+    });
+    const formControls = document.querySelectorAll('.form-control');
+    formControls.forEach(el => {
+        el.classList.remove('form-error');
+    });
+    const formStatus = document.querySelector('#form-status');
+    if (formStatus) {
+        formStatus.textContent = '';
+        formStatus.classList.remove('form-error-message');
+    }
 }
 
 function updateLanguageLabel(lang) {
