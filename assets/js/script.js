@@ -12,14 +12,54 @@ document.addEventListener('DOMContentLoaded', function() {
     // Set initial language
     setLanguage(currentLanguage);
 
-    // Language Switcher Buttons
-    const langButtons = document.querySelectorAll('.lang-btn');
-    langButtons.forEach(button => {
-        button.addEventListener('click', function() {
-            const lang = this.getAttribute('data-lang');
-            setLanguage(lang);
+    // Language Toggle Button
+    const languageToggle = document.querySelector('.language-toggle');
+    const languageMenu = document.querySelector('.language-menu');
+
+    if (languageToggle && languageMenu) {
+        // Toggle menu on button click
+        languageToggle.addEventListener('click', function(e) {
+            e.stopPropagation();
+            languageToggle.classList.toggle('active');
+            languageMenu.classList.toggle('show');
         });
-    });
+
+        // Language Option Selection
+        const languageOptions = document.querySelectorAll('.language-option');
+        languageOptions.forEach(option => {
+            option.addEventListener('click', function(e) {
+                e.stopPropagation();
+                const lang = this.getAttribute('data-lang');
+                setLanguage(lang);
+                
+                // Update active state
+                languageOptions.forEach(opt => opt.classList.remove('active'));
+                this.classList.add('active');
+                
+                // Close menu with slight delay for animation
+                setTimeout(() => {
+                    languageToggle.classList.remove('active');
+                    languageMenu.classList.remove('show');
+                }, 200);
+            });
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!languageToggle.contains(e.target) && !languageMenu.contains(e.target)) {
+                languageToggle.classList.remove('active');
+                languageMenu.classList.remove('show');
+            }
+        });
+
+        // Close menu on Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                languageToggle.classList.remove('active');
+                languageMenu.classList.remove('show');
+            }
+        });
+    }
 
     // Sticky Header
     const header = document.querySelector('.header');
@@ -27,11 +67,11 @@ document.addEventListener('DOMContentLoaded', function() {
         window.addEventListener('scroll', () => {
             try {
                 if (window.scrollY > 50) {
-                    header.style.backgroundColor = 'rgba(255, 255, 255, 0.95)';
-                    header.style.boxShadow = '0 4px 15px rgba(0,0,0,0.1)';
+                    header.style.backgroundColor = 'rgba(255, 255, 255, 0.98)';
+                    header.style.boxShadow = '0 12px 48px rgba(0, 0, 0, 0.12)';
                 } else {
-                    header.style.backgroundColor = 'var(--white-color)';
-                    header.style.boxShadow = '0 2px 10px var(--shadow-color)';
+                    header.style.backgroundColor = 'rgba(255, 255, 255, 0.95)';
+                    header.style.boxShadow = '0 8px 32px rgba(0, 0, 0, 0.08)';
                 }
             } catch (error) {
                 console.error('Error in scroll handler:', error);
@@ -49,6 +89,14 @@ document.addEventListener('DOMContentLoaded', function() {
                 const targetElement = document.querySelector(targetId);
                 
                 if (targetElement) {
+                    // Close language menu if open
+                    const languageToggle = document.querySelector('.language-toggle');
+                    const languageMenu = document.querySelector('.language-menu');
+                    if (languageToggle && languageMenu) {
+                        languageToggle.classList.remove('active');
+                        languageMenu.classList.remove('show');
+                    }
+
                     window.scrollTo({
                         top: targetElement.offsetTop - 80,
                         behavior: 'smooth'
@@ -234,13 +282,8 @@ function setLanguage(lang) {
     // Update form placeholders
     updateFormPlaceholders(lang);
 
-    // Update active language button
-    document.querySelectorAll('.lang-btn').forEach(btn => {
-        btn.classList.remove('active');
-        if (btn.getAttribute('data-lang') === lang) {
-            btn.classList.add('active');
-        }
-    });
+    // Update language label and active option
+    updateLanguageLabel(lang);
 }
 
 function updateElementContent() {
@@ -249,7 +292,6 @@ function updateElementContent() {
     elements.forEach(element => {
         const content = element.dataset[currentLanguage];
         if (content) {
-            // For elements that can have innerHTML (divs, spans, etc.)
             if (element.tagName === 'DIV' || element.tagName === 'SPAN' || 
                 element.tagName === 'P' || element.tagName === 'H1' || 
                 element.tagName === 'H2' || element.tagName === 'H3' || 
@@ -288,5 +330,13 @@ function updateFormPlaceholders(lang) {
             element.placeholder = placeholderMap[id][lang];
         }
     });
+}
+
+function updateLanguageLabel(lang) {
+    const langLabel = document.querySelector('.lang-label');
+    if (langLabel) {
+        const langName = languages[lang].name;
+        langLabel.textContent = langName;
+    }
 }
 

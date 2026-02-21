@@ -6,7 +6,7 @@
     <meta name="description" content="Pass NCLEX with expert strategic coaching. Learn prioritization, clinical reasoning, and test-taking strategies.">
     <meta name="theme-color" content="#0a4d90">
     <title data-en="Global NCLEX Prep | Smart & Strategy Approach" data-fr="Préparation NCLEX Mondiale | Approche Intelligente et Stratégique" data-ar="التحضير العالمي لـ NCLEX | نهج ذكي واستراتيجي">Global NCLEX Prep | Smart & Strategy Approach</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
 
@@ -14,19 +14,38 @@
         <nav class="nav container" role="navigation" aria-label="Main navigation">
             <a href="#" class="nav-logo" data-en="Global NCLEX Prep" data-fr="Préparation NCLEX Mondiale" data-ar="التحضير العالمي لـ NCLEX">Global NCLEX Prep</a>
             
-            <!-- Language Switcher -->
-            <div class="language-switcher">
-                <button class="lang-btn active" data-lang="en" aria-label="English">EN</button>
-                <button class="lang-btn" data-lang="fr" aria-label="Français">FR</button>
-                <button class="lang-btn" data-lang="ar" aria-label="العربية">AR</button>
-            </div>
-
             <ul class="nav-list">
                 <li><a href="#about" class="nav-link" data-en="About" data-fr="À Propos" data-ar="حول">About</a></li>
                 <li><a href="#topics" class="nav-link" data-en="Topics" data-fr="Sujets" data-ar="المواضيع">Topics</a></li>
                 <li><a href="#testimonials" class="nav-link" data-en="Testimonials" data-fr="Témoignages" data-ar="الشهادات">Testimonials</a></li>
                 <li><a href="#contact" class="nav-link" data-en="Contact" data-fr="Contact" data-ar="اتصل">Contact</a></li>
             </ul>
+
+            <!-- Premium Language Selector -->
+            <div class="language-selector">
+                <button class="language-toggle" aria-label="Select Language" aria-haspopup="menu">
+                    <span class="lang-icon">🌐</span>
+                    <span class="lang-label" data-en="English" data-fr="Français" data-ar="العربية">English</span>
+                    <span class="lang-dropdown-arrow">▼</span>
+                </button>
+                <div class="language-menu" role="menu">
+                    <button class="language-option active" data-lang="en" data-lang-name="English" data-lang-flag="🇬🇧" role="menuitem">
+                        <span class="lang-flag">🇬🇧</span>
+                        <span class="lang-name">English</span>
+                        <span class="lang-check">✓</span>
+                    </button>
+                    <button class="language-option" data-lang="fr" data-lang-name="Français" data-lang-flag="🇫🇷" role="menuitem">
+                        <span class="lang-flag">🇫🇷</span>
+                        <span class="lang-name">Français</span>
+                        <span class="lang-check">✓</span>
+                    </button>
+                    <button class="language-option" data-lang="ar" data-lang-name="العربية" data-lang-flag="🇸🇦" role="menuitem">
+                        <span class="lang-flag">🇸🇦</span>
+                        <span class="lang-name">العربية</span>
+                        <span class="lang-check">✓</span>
+                    </button>
+                </div>
+            </div>
         </nav>
     </header>
 
@@ -223,6 +242,6 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="assets/js/script.js"></script>
 </body>
 </html>
