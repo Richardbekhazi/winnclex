@@ -138,6 +138,23 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    // Testimonial Carousel
+    var cards = document.querySelectorAll('.testimonial-card');
+    var prevBtn = document.querySelector('.testimonial-prev');
+    var nextBtn = document.querySelector('.testimonial-next');
+    var currentSlide = 0;
+
+    function showSlide(index) {
+        cards.forEach(function(c) { c.classList.remove('active'); });
+        currentSlide = (index + cards.length) % cards.length;
+        cards[currentSlide].classList.add('active');
+    }
+
+    if (prevBtn && nextBtn && cards.length > 0) {
+        prevBtn.addEventListener('click', function() { showSlide(currentSlide - 1); });
+        nextBtn.addEventListener('click', function() { showSlide(currentSlide + 1); });
+    }
+
     // Form Validation & Submission
     const contactForm = document.querySelector('.contact-form');
     const submitButton = document.querySelector('.btn-submit');
@@ -328,7 +345,7 @@ function updateElementContent() {
                 element.tagName === 'H4' || element.tagName === 'LI' ||
                 element.tagName === 'BUTTON' || element.tagName === 'A' ||
                 element.tagName === 'LABEL' || element.tagName === 'TITLE' ||
-                element.tagName === 'STRONG') {
+                element.tagName === 'STRONG' || element.tagName === 'EM') {
                 element.textContent = content;
             }
         }

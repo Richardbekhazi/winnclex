@@ -1,21 +1,24 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en" dir="ltr" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Pass NCLEX with expert strategic coaching. Learn prioritization, clinical reasoning, and test-taking strategies.">
-    <meta name="theme-color" content="#0a4d90">
+    <meta name="theme-color" content="#000f4d">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <title data-en="Global NCLEX Prep | Smart & Strategy Approach" data-fr="Préparation NCLEX Mondiale | Approche Intelligente et Stratégique" data-ar="التحضير الشامل لاختبار NCLEX — منهج استراتيجي وعملي">Global NCLEX Prep | Smart & Strategy Approach</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Manrope:wght@200..800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/svg-animations.css">
 </head>
 <body>
 
+    <!-- Navigation -->
     <header class="header" role="banner">
         <nav class="nav container" role="navigation" aria-label="Main navigation">
             <a href="#" class="nav-logo" data-en="Global NCLEX Prep" data-fr="Préparation NCLEX Mondiale" data-ar="التحضير الشامل لاختبار NCLEX">Global NCLEX Prep</a>
-            
+
             <ul class="nav-list">
                 <li><a href="#about" class="nav-link" data-en="About" data-fr="À Propos" data-ar="من نحن">About</a></li>
                 <li><a href="#topics" class="nav-link" data-en="Topics" data-fr="Sujets" data-ar="المحاور">Topics</a></li>
@@ -23,36 +26,9 @@
                 <li><a href="#contact" class="nav-link" data-en="Contact" data-fr="Contact" data-ar="تواصل معنا">Contact</a></li>
             </ul>
 
-            <!-- Premium Language Selector -->
+            <!-- Language Selector -->
             <div class="language-selector">
                 <button class="language-toggle" aria-label="Select Language" aria-haspopup="menu">
-                    <span class="lang-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" style="overflow:visible;width:24px;height:24px">
-                            <defs>
-                                <radialGradient id="g-body" cx="30%" cy="30%" r="70%">
-                                    <stop offset="0%" stop-color="#38bdf8"/>
-                                    <stop offset="60%" stop-color="#0284c7"/>
-                                    <stop offset="100%" stop-color="#0f172a"/>
-                                </radialGradient>
-                                <linearGradient id="o-ring" x1="0%" y1="0%" x2="100%" y2="100%">
-                                    <stop offset="0%" stop-color="#bae6fd" stop-opacity="0.9"/>
-                                    <stop offset="50%" stop-color="#38bdf8" stop-opacity="0.2"/>
-                                    <stop offset="100%" stop-color="#bae6fd" stop-opacity="0.9"/>
-                                </linearGradient>
-                            </defs>
-                            <ellipse cx="50" cy="95" rx="25" ry="6" fill="#000" style="animation:float-shadow 4s ease-in-out infinite"/>
-                            <g style="animation:float 4s ease-in-out infinite">
-                                <circle cx="50" cy="50" r="35" fill="url(#g-body)"/>
-                                <g style="transform-origin:50px 50px;animation:spin-slow 12s linear infinite">
-                                    <ellipse cx="50" cy="50" rx="15" ry="35" fill="none" stroke="#e0f2fe" stroke-width="1.5" opacity="0.3"/>
-                                    <ellipse cx="50" cy="50" rx="35" ry="15" fill="none" stroke="#e0f2fe" stroke-width="1.5" opacity="0.3"/>
-                                </g>
-                                <path d="M 22 30 Q 50 5 78 30 A 35 35 0 0 0 22 30" fill="#fff" opacity="0.15"/>
-                                <ellipse cx="50" cy="50" rx="48" ry="16" fill="none" stroke="url(#o-ring)" stroke-width="2" transform="rotate(-20 50 50)"/>
-                                <circle cx="10" cy="35" r="4" fill="#fff" style="animation:pulse-glow 2s infinite alternate"/>
-                            </g>
-                        </svg>
-                    </span>
                     <span class="lang-label" data-en="English" data-fr="Français" data-ar="العربية">English</span>
                     <span class="lang-dropdown-arrow">▼</span>
                 </button>
@@ -78,44 +54,64 @@
     </header>
 
     <main>
+        <!-- Hero Section -->
         <section class="hero">
-            <div class="hero-content">
-                <h1 data-en="Pass the NCLEX with Confidence" data-fr="Réussir le NCLEX avec Confiance" data-ar="اجتز اختبار NCLEX بثقة">Pass the NCLEX with Confidence</h1>
-                <p data-en="Master the strategies, clinical reasoning, and confidence needed to excel. Our expert coaching is designed for your success." data-fr="Maîtrisez les stratégies, le raisonnement clinique et la confiance nécessaires pour réussir. Notre coaching d'expert est conçu pour votre succès." data-ar="أتقن استراتيجيات الاختبار والتفكير الإكلينيكي والثقة اللازمة للتميز. برنامجنا التدريبي مُصمم لدعم نجاحك.">Master the strategies, clinical reasoning, and confidence needed to excel. Our expert coaching is designed for your success.</p>
-                <a href="#contact" class="btn" aria-label="Navigate to contact section to book a session" data-en="Book a Session" data-fr="Réserver une Session" data-ar="احجز جلسة">Book a Session</a>
+            <div class="hero-bg">
+                <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=2070&auto=format&fit=crop" alt="" loading="eager" class="hero-bg-img">
+            </div>
+            <div class="hero-content container">
+                <span class="hero-badge" data-en="The Strategic Path to Licensure" data-fr="Le Chemin Stratégique vers la Licence" data-ar="المسار الاستراتيجي نحو الترخيص">The Strategic Path to Licensure</span>
+                <h1 class="hero-title">
+                    <span data-en="Pass the NCLEX" data-fr="Réussir le NCLEX" data-ar="اجتز اختبار NCLEX">Pass the NCLEX</span>
+                    <em data-en="with Confidence." data-fr="avec Confiance." data-ar="بثقة.">with Confidence.</em>
+                </h1>
+                <p class="hero-subtitle" data-en="Master the strategies, clinical reasoning, and confidence needed to excel. Our expert coaching is designed for your success." data-fr="Maîtrisez les stratégies, le raisonnement clinique et la confiance nécessaires pour réussir. Notre coaching d'expert est conçu pour votre succès." data-ar="أتقن استراتيجيات الاختبار والتفكير الإكلينيكي والثقة اللازمة للتميز. برنامجنا التدريبي مُصمم لدعم نجاحك.">Master the strategies, clinical reasoning, and confidence needed to excel. Our expert coaching is designed for your success.</p>
+                <a href="#contact" class="btn btn-hero" aria-label="Navigate to contact section to book a session" data-en="Book a Session" data-fr="Réserver une Session" data-ar="احجز جلسة">Book a Session</a>
             </div>
         </section>
 
-        <section id="about" class="section">
+        <!-- Why Choose Us (Bento Grid) -->
+        <section id="about" class="section section-light">
             <div class="container fade-in">
-                <h2 class="section-title" data-en="Why Choose Us?" data-fr="Pourquoi nous Choisir?" data-ar="لماذا تختارنا؟">Why Choose Us?</h2>
-                <div class="grid-2">
-                    <div>
-                        <h3 data-en="A Smarter Approach to Success" data-fr="Une Approche Plus Intelligente du Succès" data-ar="نهج أذكى لتحقيق النجاح">A Smarter Approach to Success</h3>
-                        <p data-en="NCLEX success is more than memorization. It's about understanding the exam's logic. We specialize in teaching you the test-taking strategies, clinical reasoning, and question interpretation techniques that lead to confident and correct answers." data-fr="La réussite du NCLEX est plus que la mémorisation. C'est comprendre la logique de l'examen. Nous nous spécialisons dans l'enseignement des stratégies de test, du raisonnement clinique et des techniques d'interprétation des questions qui mènent à des réponses confiantes et correctes." data-ar="النجاح في NCLEX لا يقتصر على الحفظ؛ بل يعتمد على فهم منطق الامتحان. نعلمك استراتيجيات الاختبار والتفكير الإكلينيكي وتقنيات تفسير الأسئلة للوصول إلى إجابات صحيحة بثقة.">NCLEX success is more than memorization. It's about understanding the exam's logic. We specialize in teaching you the test-taking strategies, clinical reasoning, and question interpretation techniques that lead to confident and correct answers.</p>
-                        <br>
-                        <p><strong data-en="Our coaching focuses on:" data-fr="Notre coaching se concentre sur:" data-ar="يركز تدريبنا على:">Our coaching focuses on:</strong></p>
-                        <ul class="check-list">
-                            <li data-en="Decoding complex NCLEX-style questions" data-fr="Décoder les questions de style NCLEX complexes" data-ar="تحليل أسئلة NCLEX المعقدة">Decoding complex NCLEX-style questions</li>
-                            <li data-en="Mastering prioritization and safety principles" data-fr="Maîtriser la priorisation et les principes de sécurité" data-ar="إتقان ترتيب الأولويات ومبادئ السلامة">Mastering prioritization and safety principles</li>
-                            <li data-en="Applying clinical reasoning frameworks" data-fr="Appliquer les cadres de raisonnement clinique" data-ar="تطبيق أطر التفكير الإكلينيكي">Applying clinical reasoning frameworks</li>
-                            <li data-en="Avoiding common exam traps and pitfalls" data-fr="Éviter les pièges et les embûches courantes de l'examen" data-ar="تجنب الأخطاء الشائعة والفخاخ الامتحانية">Avoiding common exam traps and pitfalls</li>
-                            <li data-en="Building unshakeable test-day confidence" data-fr="Construire une confiance inébranlable le jour du test" data-ar="بناء ثقة قوية ليوم الاختبار">Building unshakeable test-day confidence</li>
-                        </ul>
-                         <div class="languages" style="margin-top: 1.5rem; text-align: left;">
-                            <p><strong data-en="Language support for:" data-fr="Support linguistique pour:" data-ar="دعم اللغات:">Language support for:</strong> English | Français | العربية</p>
-                        </div>
+                <div class="about-header">
+                    <h2 class="section-title" data-en="Why Choose Us?" data-fr="Pourquoi nous Choisir?" data-ar="لماذا تختارنا؟">Why Choose Us?</h2>
+                    <p class="section-subtitle" data-en="NCLEX success is more than memorization. It's about understanding the exam's logic. We specialize in teaching you the test-taking strategies, clinical reasoning, and question interpretation techniques that lead to confident and correct answers." data-fr="La réussite du NCLEX est plus que la mémorisation. C'est comprendre la logique de l'examen. Nous nous spécialisons dans l'enseignement des stratégies de test, du raisonnement clinique et des techniques d'interprétation des questions qui mènent à des réponses confiantes et correctes." data-ar="النجاح في NCLEX لا يقتصر على الحفظ؛ بل يعتمد على فهم منطق الامتحان. نعلمك استراتيجيات الاختبار والتفكير الإكلينيكي وتقنيات تفسير الأسئلة للوصول إلى إجابات صحيحة بثقة.">NCLEX success is more than memorization. It's about understanding the exam's logic. We specialize in teaching you the test-taking strategies, clinical reasoning, and question interpretation techniques that lead to confident and correct answers.</p>
+                </div>
+                <div class="bento-grid">
+                    <div class="bento-card">
+                        <div class="bento-icon">✦</div>
+                        <h3 data-en="Decoding Complex Questions" data-fr="Décoder les Questions Complexes" data-ar="تحليل الأسئلة المعقدة">Decoding Complex Questions</h3>
+                        <p data-en="Master the art of breaking down NCLEX-style questions into clear, answerable components." data-fr="Maîtrisez l'art de décomposer les questions de style NCLEX en composants clairs et faciles à répondre." data-ar="أتقن فن تحليل أسئلة NCLEX إلى مكونات واضحة وقابلة للإجابة.">Master the art of breaking down NCLEX-style questions into clear, answerable components.</p>
                     </div>
-                    <div>
-                        <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=2070&auto=format&fit=crop" alt="Nurse helping a patient with care and compassion" class="about-img" loading="lazy">
+                    <div class="bento-card bento-card-accent">
+                        <div class="bento-icon">◈</div>
+                        <h3 data-en="Clinical Reasoning" data-fr="Raisonnement Clinique" data-ar="التفكير الإكلينيكي">Clinical Reasoning</h3>
+                        <p data-en="Applying clinical reasoning frameworks rooted in real-world nursing practice." data-fr="Appliquer les cadres de raisonnement clinique ancrés dans la pratique infirmière réelle." data-ar="تطبيق أطر التفكير الإكلينيكي المبنية على ممارسة التمريض الفعلية.">Applying clinical reasoning frameworks rooted in real-world nursing practice.</p>
                     </div>
+                    <div class="bento-card">
+                        <div class="bento-icon">△</div>
+                        <h3 data-en="Prioritization Mastery" data-fr="Maîtrise de la Priorisation" data-ar="إتقان الأولويات">Prioritization Mastery</h3>
+                        <p data-en="Mastering prioritization and safety principles that the NCLEX tests relentlessly." data-fr="Maîtriser la priorisation et les principes de sécurité que le NCLEX teste sans relâche." data-ar="إتقان ترتيب الأولويات ومبادئ السلامة التي يختبرها NCLEX باستمرار.">Mastering prioritization and safety principles that the NCLEX tests relentlessly.</p>
+                    </div>
+                    <div class="bento-card">
+                        <div class="bento-icon">◉</div>
+                        <h3 data-en="Confidence Building" data-fr="Renforcement de la Confiance" data-ar="بناء الثقة">Confidence Building</h3>
+                        <p data-en="Building unshakeable test-day confidence through practice and strategy." data-fr="Construire une confiance inébranlable le jour du test grâce à la pratique et la stratégie." data-ar="بناء ثقة قوية ليوم الاختبار من خلال الممارسة والاستراتيجية.">Building unshakeable test-day confidence through practice and strategy.</p>
+                    </div>
+                </div>
+                <div class="language-support-badge">
+                    <p><strong data-en="Language support for:" data-fr="Support linguistique pour:" data-ar="دعم اللغات:">Language support for:</strong> English | Français | العربية</p>
                 </div>
             </div>
         </section>
 
+        <!-- Key Topics -->
         <section id="topics" class="section">
             <div class="container fade-in">
-                <h2 class="section-title" data-en="Key Topics Covered" data-fr="Sujets Clés Couverts" data-ar="المحاور الرئيسية المشمولة">Key Topics Covered</h2>
+                <div class="topics-header">
+                    <span class="section-label" data-en="Core Curriculum" data-fr="Programme de Base" data-ar="المنهج الأساسي">Core Curriculum</span>
+                    <h2 class="section-title" data-en="Key Topics Covered" data-fr="Sujets Clés Couverts" data-ar="المحاور الرئيسية المشمولة">Key Topics Covered</h2>
+                </div>
                 <div class="topics-grid">
                     <div class="topic-card">
                         <h4 data-en="Strategy & Core Concepts" data-fr="Stratégie et Concepts Fondamentaux" data-ar="الاستراتيجية والمفاهيم الأساسية">Strategy & Core Concepts</h4>
@@ -175,116 +171,125 @@
             </div>
         </section>
 
-        <section id="testimonials" class="section testimonials-section">
+        <!-- Testimonials -->
+        <section id="testimonials" class="section section-dark">
             <div class="container fade-in">
                 <div class="testimonials-header">
                     <h2 class="section-title" data-en="Hear From Our Successful Nurses" data-fr="Écoutez Nos Infirmières Réussies" data-ar="اسمع من ممرضاتنا الناجحات">Hear From Our Successful Nurses</h2>
                     <p class="testimonials-subtitle" data-en="Join hundreds of nurses who transformed their NCLEX prep experience" data-fr="Rejoignez des centaines d'infirmières qui ont transformé leur expérience de préparation au NCLEX" data-ar="انضم إلى مئات الممرضات اللاتي غيّرن تجربة تحضيرهن للاختبار">Join hundreds of nurses who transformed their NCLEX prep experience</p>
                 </div>
-                <div class="testimonials-grid">
-                    <div class="testimonial-card premium">
-                        <div class="testimonial-stars">★★★★★</div>
-                        <p class="testimonial-text" data-en="The strategies I learned were a game-changer. I felt so much more confident and passed on my first try! The focus on prioritization was exactly what I needed." data-fr="Les stratégies que j'ai apprises ont changé la donne. J'étais beaucoup plus confiant et j'ai réussi du premier coup! L'accent mis sur la priorisation était exactement ce dont j'avais besoin." data-ar="الاستراتيجيات التي تعلمتها غيرت قواعس اللعبة. شعرت بثقة أكبر بكثير واجتزت المحاولة الأولى! كان التركيز على الأولويات هو بالضبط ما كنت بحاجة إليه.">"The strategies I learned were a game-changer. I felt so much more confident and passed on my first try! The focus on prioritization was exactly what I needed."</p>
-                        <div class="testimonial-footer">
-                            <div class="testimonial-author-info">
-                                <p class="author-name">Jessica L, RN</p>
-                                <span class="author-badge" data-en="Passed on 1st Attempt" data-fr="Réussi à la 1ère Tentative" data-ar="نجحت في المحاولة الأولى">Passed on 1st Attempt</span>
+                <div class="testimonial-carousel">
+                    <div class="testimonial-quote-mark">"</div>
+                    <div class="testimonial-track">
+                        <div class="testimonial-card active">
+                            <p class="testimonial-text" data-en="The strategies I learned were a game-changer. I felt so much more confident and passed on my first try! The focus on prioritization was exactly what I needed." data-fr="Les stratégies que j'ai apprises ont changé la donne. J'étais beaucoup plus confiant et j'ai réussi du premier coup! L'accent mis sur la priorisation était exactement ce dont j'avais besoin." data-ar="الاستراتيجيات التي تعلمتها غيرت قواعس اللعبة. شعرت بثقة أكبر بكثير واجتزت المحاولة الأولى! كان التركيز على الأولويات هو بالضبط ما كنت بحاجة إليه.">"The strategies I learned were a game-changer. I felt so much more confident and passed on my first try! The focus on prioritization was exactly what I needed."</p>
+                            <div class="testimonial-footer">
+                                <div class="testimonial-author-info">
+                                    <p class="author-name">Jessica L, RN</p>
+                                    <span class="author-badge" data-en="Passed on 1st Attempt" data-fr="Réussi à la 1ère Tentative" data-ar="نجحت في المحاولة الأولى">Passed on 1st Attempt</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-card">
+                            <p class="testimonial-text" data-en="As an international nurse, the language support and focus on clinical reasoning made all the difference. The instructors were patient and broke down complex topics. Highly recommended!" data-fr="En tant qu'infirmière internationale, le soutien linguistique et l'accent mis sur le raisonnement clinique ont fait toute la différence. Les instructeurs étaient patients et ont décomposé les sujets complexes. Hautement recommandé!" data-ar="كممرضة دولية، كان الدعم اللغوي والتركيز على التفكير السريري فرقًا كبيرًا. كان المدرسون صبورين وقاموا بتقسيم المواضيع المعقدة. موصى به بدرجة عالية!">"As an international nurse, the language support and focus on clinical reasoning made all the difference. The instructors were patient and broke down complex topics. Highly recommended!"</p>
+                            <div class="testimonial-footer">
+                                <div class="testimonial-author-info">
+                                    <p class="author-name">David M, RN</p>
+                                    <span class="author-badge" data-en="Internationally Educated Nurse" data-fr="Infirmière Formée Internationalement" data-ar="ممرضة تعليم دولي">Internationally Educated Nurse</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-card">
+                            <p class="testimonial-text" data-en="I had failed the NCLEX twice and was losing hope. This program rebuilt my confidence from the ground up. The one-on-one coaching helped me identify my weak spots. I finally passed!" data-fr="J'avais échoué le NCLEX deux fois et je perdais espoir. Ce programme a reconstruit ma confiance à partir de zéro. L'entraînement individuel m'a aidé à identifier mes points faibles. J'ai enfin réussi!" data-ar="فشلت في NCLEX مرتين وكنت أفقد الأمل. أعاد هذا البرنامج بناء ثقتي من الصفر. ساعدني التدريب الفردي على تحديد نقاط ضعفي. نجحت أخيراً!">"I had failed the NCLEX twice and was losing hope. This program rebuilt my confidence from the ground up. The one-on-one coaching helped me identify my weak spots. I finally passed!"</p>
+                            <div class="testimonial-footer">
+                                <div class="testimonial-author-info">
+                                    <p class="author-name">Sarah K, RN</p>
+                                    <span class="author-badge" data-en="Passed on 3rd Attempt" data-fr="Réussi à la 3ème Tentative" data-ar="نجحت في المحاولة الثالثة">Passed on 3rd Attempt</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-card">
+                            <p class="testimonial-text" data-en="The content was perfectly tailored to the new NGN format. The case studies were incredibly realistic and helped me think like the NCLEX wants you to think. So grateful for this prep!" data-fr="Le contenu était parfaitement adapté au nouveau format NGN. Les études de cas étaient incroyablement réalistes et m'ont aidé à penser comme le NCLEX le souhaite. Tellement reconnaissant pour cette préparation!" data-ar="كان المحتوى مخصصًا تماماً لتنسيق NGN الجديد. كانت دراسات الحالة واقعية بشكل لا يصدق وساعدتني في التفكير بالطريقة التي يريدها NCLEX. شاكر جداً لهذا التحضير!">"The content was perfectly tailored to the new NGN format. The case studies were incredibly realistic and helped me think like the NCLEX wants you to think. So grateful for this prep!"</p>
+                            <div class="testimonial-footer">
+                                <div class="testimonial-author-info">
+                                    <p class="author-name">Michael B, RN</p>
+                                    <span class="author-badge" data-en="Passed the NGN NCLEX" data-fr="Réussi le NGN NCLEX" data-ar="نجح في NGN NCLEX">Passed the NGN NCLEX</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-card">
+                            <p class="testimonial-text" data-en="As a French-speaking candidate, having access to coaching in my native language removed so much stress. I understood the nuances of the questions better and felt truly supported throughout my prep." data-fr="En tant que candidate francophone, avoir accès à un coaching dans ma langue maternelle a levé beaucoup de stress. J'ai mieux compris les nuances des questions et j'ai senti un vrai soutien tout au long de ma préparation." data-ar="بصفتي مرشحة ناطقة بالفرنسية، كان الوصول إلى الدعم باللغة الأم يخفف الكثير من التوتر. فهمت تفاصيل الأسئلة بشكل أفضل وشعرت بالدعم الحقيقي طوال فترة إعدادي.">"As a French-speaking candidate, having access to coaching in my native language removed so much stress. I understood the nuances of the questions better and felt truly supported throughout my prep."</p>
+                            <div class="testimonial-footer">
+                                <div class="testimonial-author-info">
+                                    <p class="author-name">Aisha R, RN</p>
+                                    <span class="author-badge" data-en="French-Speaking Graduate" data-fr="Diplômée Francophone" data-ar="خريجة ناطقة بالفرنسية">French-Speaking Graduate</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-card">
+                            <p class="testimonial-text" data-en="The clinical reasoning framework completely changed how I approach nursing problems. The Arabic language support was invaluable, and I finally understood how to apply real-world knowledge to exam questions." data-fr="Le cadre du raisonnement clinique a complètement changé ma façon d'aborder les problèmes infirmiers. Le soutien en langue arabe était inestimable, et j'ai enfin compris comment appliquer les connaissances du monde réel aux questions d'examen." data-ar="غيّر إطار التفكير السريري تماماً طريقة اقترابي من مشاكل التمريض. كان دعم اللغة العربية لا يقدر بثمن، وأخيراً فهمت كيفية تطبيق المعرفة الواقعية على أسئلة الامتحان.">"The clinical reasoning framework completely changed how I approach nursing problems. The Arabic language support was invaluable, and I finally understood how to apply real-world knowledge to exam questions."</p>
+                            <div class="testimonial-footer">
+                                <div class="testimonial-author-info">
+                                    <p class="author-name">Omar T, RN</p>
+                                    <span class="author-badge" data-en="Arabic-Speaking Graduate" data-fr="Diplômée Arabophones" data-ar="خريج ناطق بالعربية">Arabic-Speaking Graduate</span>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="testimonial-card premium">
-                        <div class="testimonial-stars">★★★★★</div>
-                        <p class="testimonial-text" data-en="As an international nurse, the language support and focus on clinical reasoning made all the difference. The instructors were patient and broke down complex topics. Highly recommended!" data-fr="En tant qu'infirmière internationale, le soutien linguistique et l'accent mis sur le raisonnement clinique ont fait toute la différence. Les instructeurs étaient patients et ont décomposé les sujets complexes. Hautement recommandé!" data-ar="كممرضة دولية، كان الدعم اللغوي والتركيز على التفكير السريري فرقًا كبيرًا. كان المدرسون صبورين وقاموا بتقسيم المواضيع المعقدة. موصى به بدرجة عالية!">"As an international nurse, the language support and focus on clinical reasoning made all the difference. The instructors were patient and broke down complex topics. Highly recommended!"</p>
-                        <div class="testimonial-footer">
-                            <div class="testimonial-author-info">
-                                <p class="author-name">David M, RN</p>
-                                <span class="author-badge" data-en="Internationally Educated Nurse" data-fr="Infirmière Formée Internationalement" data-ar="ممرضة تعليم دولي">Internationally Educated Nurse</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testimonial-card premium">
-                        <div class="testimonial-stars">★★★★★</div>
-                        <p class="testimonial-text" data-en="I had failed the NCLEX twice and was losing hope. This program rebuilt my confidence from the ground up. The one-on-one coaching helped me identify my weak spots. I finally passed!" data-fr="J'avais échoué le NCLEX deux fois et je perdais espoir. Ce programme a reconstruit ma confiance à partir de zéro. L'entraînement individuel m'a aidé à identifier mes points faibles. J'ai enfin réussi!" data-ar="فشلت في NCLEX مرتين وكنت أفقد الأمل. أعاد هذا البرنامج بناء ثقتي من الصفر. ساعدني التدريب الفردي على تحديد نقاط ضعفي. نجحت أخيراً!">"I had failed the NCLEX twice and was losing hope. This program rebuilt my confidence from the ground up. The one-on-one coaching helped me identify my weak spots. I finally passed!"</p>
-                        <div class="testimonial-footer">
-                            <div class="testimonial-author-info">
-                                <p class="author-name">Sarah K, RN</p>
-                                <span class="author-badge" data-en="Passed on 3rd Attempt" data-fr="Réussi à la 3ème Tentative" data-ar="نجحت في المحاولة الثالثة">Passed on 3rd Attempt</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testimonial-card premium">
-                        <div class="testimonial-stars">★★★★★</div>
-                        <p class="testimonial-text" data-en="The content was perfectly tailored to the new NGN format. The case studies were incredibly realistic and helped me think like the NCLEX wants you to think. So grateful for this prep!" data-fr="Le contenu était parfaitement adapté au nouveau format NGN. Les études de cas étaient incroyablement réalistes et m'ont aidé à penser comme le NCLEX le souhaite. Tellement reconnaissant pour cette préparation!" data-ar="كان المحتوى مخصصًا تماماً لتنسيق NGN الجديد. كانت دراسات الحالة واقعية بشكل لا يصدق وساعدتني في التفكير بالطريقة التي يريدها NCLEX. شاكر جداً لهذا التحضير!">"The content was perfectly tailored to the new NGN format. The case studies were incredibly realistic and helped me think like the NCLEX wants you to think. So grateful for this prep!"</p>
-                        <div class="testimonial-footer">
-                            <div class="testimonial-author-info">
-                                <p class="author-name">Michael B, RN</p>
-                                <span class="author-badge" data-en="Passed the NGN NCLEX" data-fr="Réussi le NGN NCLEX" data-ar="نجح في NGN NCLEX">Passed the NGN NCLEX</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testimonial-card premium">
-                        <div class="testimonial-stars">★★★★★</div>
-                        <p class="testimonial-text" data-en="As a French-speaking candidate, having access to coaching in my native language removed so much stress. I understood the nuances of the questions better and felt truly supported throughout my prep." data-fr="En tant que candidate francophone, avoir accès à un coaching dans ma langue maternelle a levé beaucoup de stress. J'ai mieux compris les nuances des questions et j'ai senti un vrai soutien tout au long de ma préparation." data-ar="بصفتي مرشحة ناطقة بالفرنسية، كان الوصول إلى الدعم باللغة الأم يخفف الكثير من التوتر. فهمت تفاصيل الأسئلة بشكل أفضل وشعرت بالدعم الحقيقي طوال فترة إعدادي.">"As a French-speaking candidate, having access to coaching in my native language removed so much stress. I understood the nuances of the questions better and felt truly supported throughout my prep."</p>
-                        <div class="testimonial-footer">
-                            <div class="testimonial-author-info">
-                                <p class="author-name">Aisha R, RN</p>
-                                <span class="author-badge" data-en="French-Speaking Graduate" data-fr="Diplômée Francophone" data-ar="خريجة ناطقة بالفرنسية">French-Speaking Graduate</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testimonial-card premium">
-                        <div class="testimonial-stars">★★★★★</div>
-                        <p class="testimonial-text" data-en="The clinical reasoning framework completely changed how I approach nursing problems. The Arabic language support was invaluable, and I finally understood how to apply real-world knowledge to exam questions." data-fr="Le cadre du raisonnement clinique a complètement changé ma façon d'aborder les problèmes infirmiers. Le soutien en langue arabe était inestimable, et j'ai enfin compris comment appliquer les connaissances du monde réel aux questions d'examen." data-ar="غيّر إطار التفكير السريري تماماً طريقة اقترابي من مشاكل التمريض. كان دعم اللغة العربية لا يقدر بثمن، وأخيراً فهمت كيفية تطبيق المعرفة الواقعية على أسئلة الامتحان.">"The clinical reasoning framework completely changed how I approach nursing problems. The Arabic language support was invaluable, and I finally understood how to apply real-world knowledge to exam questions."</p>
-                        <div class="testimonial-footer">
-                            <div class="testimonial-author-info">
-                                <p class="author-name">Omar T, RN</p>
-                                <span class="author-badge" data-en="Arabic-Speaking Graduate" data-fr="Diplômée Arabophones" data-ar="خريج ناطق بالعربية">Arabic-Speaking Graduate</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-                        </div>
+                    <div class="testimonial-nav">
+                        <button class="testimonial-btn testimonial-prev" aria-label="Previous testimonial">&#8592;</button>
+                        <button class="testimonial-btn testimonial-next" aria-label="Next testimonial">&#8594;</button>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- Contact -->
         <section id="contact" class="section">
             <div class="container fade-in">
-                <h2 class="section-title" data-en="Ready to Start?" data-fr="Prêt à Commencer?" data-ar="هل أنت مستعد للبدء؟">Ready to Start?</h2>
-                <p style="text-align:center; max-width: 600px; margin: 0 auto 3rem auto;" data-en="Contact us today to book your first session. Flexible online scheduling is available to fit your busy life." data-fr="Contactez-nous aujourd'hui pour réserver votre première session. Un calendrier en ligne flexible est disponible pour s'adapter à votre vie chargée." data-ar="اتصل بنا اليوم لحجز جلستك الأولى. يتوفر جدول زمني مرن عبر الإنترنت يناسب حياتك المشغولة.">Contact us today to book your first session. Flexible online scheduling is available to fit your busy life.</p>
+                <div class="contact-header">
+                    <span class="section-label" data-en="Consultation" data-fr="Consultation" data-ar="استشارة">Consultation</span>
+                    <h2 class="section-title" data-en="Ready to Start?" data-fr="Prêt à Commencer?" data-ar="هل أنت مستعد للبدء؟">Ready to Start?</h2>
+                    <p class="section-subtitle" data-en="Contact us today to book your first session. Flexible online scheduling is available to fit your busy life." data-fr="Contactez-nous aujourd'hui pour réserver votre première session. Un calendrier en ligne flexible est disponible pour s'adapter à votre vie chargée." data-ar="اتصل بنا اليوم لحجز جلستك الأولى. يتوفر جدول زمني مرن عبر الإنترنت يناسب حياتك المشغولة.">Contact us today to book your first session. Flexible online scheduling is available to fit your busy life.</p>
+                </div>
                 <form class="contact-form" action="https://api.web3forms.com/submit" method="POST" novalidate>
                     <input type="hidden" name="access_key" value="acbc1f9e-078c-4249-b3fb-07a49a784c71">
                     <input type="hidden" name="subject" value="New Contact from Global NCLEX Prep">
                     <input type="checkbox" name="botcheck" class="hidden" style="display:none">
-                    <div class="form-group">
-                        <label for="name" data-en="Your Name" data-fr="Votre Nom" data-ar="اسمك">Your Name</label>
-                        <input type="text" name="name" id="name" class="form-control" placeholder="Your Name" required aria-required="true" data-placeholder-en="Your Name" data-placeholder-fr="Votre Nom" data-placeholder-ar="اسمك">
-                        <span class="error-message" id="name-error" role="alert"></span>
-                    </div>
-                    <div class="form-group">
-                        <label for="email" data-en="Your Email" data-fr="Votre Email" data-ar="بريدك الإلكتروني">Your Email</label>
-                        <input type="email" name="email" id="email" class="form-control" placeholder="Your Email" required aria-required="true" data-placeholder-en="Your Email" data-placeholder-fr="Votre Email" data-placeholder-ar="بريدك الإلكتروني">
-                        <span class="error-message" id="email-error" role="alert"></span>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name" data-en="Your Name" data-fr="Votre Nom" data-ar="اسمك">Your Name</label>
+                            <input type="text" name="name" id="name" class="form-control" placeholder="Your Name" required aria-required="true" data-placeholder-en="Your Name" data-placeholder-fr="Votre Nom" data-placeholder-ar="اسمك">
+                            <span class="error-message" id="name-error" role="alert"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" data-en="Your Email" data-fr="Votre Email" data-ar="بريدك الإلكتروني">Your Email</label>
+                            <input type="email" name="email" id="email" class="form-control" placeholder="Your Email" required aria-required="true" data-placeholder-en="Your Email" data-placeholder-fr="Votre Email" data-placeholder-ar="بريدك الإلكتروني">
+                            <span class="error-message" id="email-error" role="alert"></span>
+                        </div>
                     </div>
                     <div class="form-group">
                         <label for="message" data-en="Your Message" data-fr="Votre Message" data-ar="رسالتك">Your Message</label>
-                        <textarea name="message" id="message" class="form-control" placeholder="Your Message" required aria-required="true" data-placeholder-en="Your Message" data-placeholder-fr="Votre Message" data-placeholder-ar="رسالتك"></textarea>
+                        <textarea name="message" id="message" class="form-control" placeholder="Your Message" rows="4" required aria-required="true" data-placeholder-en="Your Message" data-placeholder-fr="Votre Message" data-placeholder-ar="رسالتك"></textarea>
                         <span class="error-message" id="message-error" role="alert"></span>
                     </div>
-                    <button type="submit" class="btn btn-submit" aria-label="Send message to Global NCLEX Prep" data-en="Send Message" data-fr="Envoyer le Message" data-ar="إرسال الرسالة">Send Message</button>
+                    <div class="form-submit-row">
+                        <button type="submit" class="btn btn-submit" aria-label="Send message to Global NCLEX Prep" data-en="Send Message" data-fr="Envoyer le Message" data-ar="إرسال الرسالة">Send Message</button>
+                    </div>
                     <span class="form-status" id="form-status" role="status"></span>
                 </form>
             </div>
         </section>
     </main>
 
+    <!-- Footer -->
     <footer>
         <div class="container footer-content">
-            <p><strong data-en="Disclaimer:" data-fr="Avertissement:" data-ar="تنصل:">Disclaimer:</strong> <span data-en="This is an independent educational coaching service and is not affiliated with the NCSBN® or NCLEX®. Our goal is to provide supplementary strategic coaching." data-fr="Il s'agit d'un service de coaching éducatif indépendant et n'est pas affilié à NCSBN® ou NCLEX®. Notre objectif est de fournir un coaching stratégique supplémentaire." data-ar="هذه خدمة تدريب تعليمي مستقلة وليست مرتبطة بـ NCSBN® أو NCLEX®. هدفنا هو توفير تدريب استراتيجي تكميلي.">This is an independent educational coaching service and is not affiliated with the NCSBN® or NCLEX®. Our goal is to provide supplementary strategic coaching.</span></p>
-            <p><span data-en="© 2026 Global NCLEX Prep. All Rights Reserved." data-fr="© 2026 Préparation NCLEX Mondiale. Tous Droits Réservés." data-ar="© 2026 التحضير العالمي لـ NCLEX. جميع الحقوق محفوظة.">© 2026 Global NCLEX Prep. All Rights Reserved.</span></p>
+            <div class="footer-brand">
+                <span class="footer-logo" data-en="Global NCLEX Prep" data-fr="Préparation NCLEX Mondiale" data-ar="التحضير الشامل لـ NCLEX">Global NCLEX Prep</span>
+                <p class="footer-disclaimer"><strong data-en="Disclaimer:" data-fr="Avertissement:" data-ar="تنصل:">Disclaimer:</strong> <span data-en="This is an independent educational coaching service and is not affiliated with the NCSBN® or NCLEX®. Our goal is to provide supplementary strategic coaching." data-fr="Il s'agit d'un service de coaching éducatif indépendant et n'est pas affilié à NCSBN® ou NCLEX®. Notre objectif est de fournir un coaching stratégique supplémentaire." data-ar="هذه خدمة تدريب تعليمي مستقلة وليست مرتبطة بـ NCSBN® أو NCLEX®. هدفنا هو توفير تدريب استراتيجي تكميلي.">This is an independent educational coaching service and is not affiliated with the NCSBN® or NCLEX®. Our goal is to provide supplementary strategic coaching.</span></p>
+            </div>
+            <p class="footer-copy"><span data-en="© 2026 Global NCLEX Prep. All Rights Reserved." data-fr="© 2026 Préparation NCLEX Mondiale. Tous Droits Réservés." data-ar="© 2026 التحضير العالمي لـ NCLEX. جميع الحقوق محفوظة.">© 2026 Global NCLEX Prep. All Rights Reserved.</span></p>
         </div>
     </footer>
 
