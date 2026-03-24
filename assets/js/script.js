@@ -138,47 +138,60 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Form Validation
+    // Form Validation & Submission
     const contactForm = document.querySelector('.contact-form');
+    const submitButton = document.querySelector('.btn-submit');
     if (contactForm) {
         contactForm.addEventListener('submit', function(e) {
             e.preventDefault();
-            try {
-                if (validateForm()) {
-                    this.submit();
-                }
-                } catch (error) {
-                console.error('Form submission error:', error);
-                const errorMsg = currentLanguage === 'ar' ? 'حدث خطأ. يُرجى المحاولة مرة أخرى.' :
-                                 currentLanguage === 'fr' ? "Une erreur est survenue. Veuillez réessayer." :
-                                 'An error occurred. Please try again.';
-                showFormError(errorMsg);
+            if (!validateForm()) return;
+
+            // Disable button and show sending state
+            const originalText = submitButton ? submitButton.textContent : '';
+            if (submitButton) {
+                submitButton.disabled = true;
+                submitButton.textContent = currentLanguage === 'ar' ? 'جاري الإرسال...' :
+                                           currentLanguage === 'fr' ? 'Envoi en cours...' : 'Sending...';
             }
+
+            var object = {};
+            new FormData(contactForm).forEach(function(value, key) { object[key] = value; });
+
+            fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+                body: JSON.stringify(object)
+            })
+            .then(function(response) { return response.json(); })
+            .then(function(data) {
+                if (data.success) {
+                    contactForm.reset();
+                    var successMsg = currentLanguage === 'ar' ? 'تم إرسال رسالتك بنجاح!' :
+                                     currentLanguage === 'fr' ? 'Votre message a été envoyé avec succès !' :
+                                     'Your message was sent successfully!';
+                    showFormSuccess(successMsg);
+                } else {
+                    throw new Error(data.message || 'Submission failed');
+                }
+            })
+            .catch(function(error) {
+                console.error('Form submission error:', error);
+                var errorMsg = currentLanguage === 'ar' ? 'حدث خطأ. يُرجى المحاولة مرة أخرى.' :
+                               currentLanguage === 'fr' ? 'Une erreur est survenue. Veuillez réessayer.' :
+                               'An error occurred. Please try again.';
+                showFormError(errorMsg);
+            })
+            .finally(function() {
+                if (submitButton) {
+                    submitButton.disabled = false;
+                    submitButton.textContent = originalText;
+                }
+            });
         });
 
-        const inputs = contactForm.querySelectorAll('.form-control');
-        inputs.forEach(input => {
-            input.addEventListener('blur', function() {
-                validateField(this);
-            });
-            input.addEventListener('input', function() {
-                clearFieldError(this);
-            });
-        });
-    }
-
-    // Prevent form double submission
-    const submitButton = document.querySelector('.btn-submit');
-    if (submitButton) {
-        submitButton.addEventListener('click', function() {
-            this.disabled = true;
-            const originalText = this.textContent;
-            this.textContent = currentLanguage === 'ar' ? 'جاري الإرسال...' : 
-                               currentLanguage === 'fr' ? 'Envoi en cours...' : 'Sending...';
-            setTimeout(() => {
-                this.disabled = false;
-                this.textContent = originalText;
-            }, 3000);
+        contactForm.querySelectorAll('.form-control').forEach(function(input) {
+            input.addEventListener('blur', function() { validateField(this); });
+            input.addEventListener('input', function() { clearFieldError(this); });
         });
     }
 
@@ -253,10 +266,24 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
+    function showFormSuccess(message) {
+        const statusElement = document.querySelector('#form-status');
+        if (statusElement) {
+            statusElement.textContent = message;
+            statusElement.classList.remove('form-error-message');
+            statusElement.classList.add('form-success-message');
+            setTimeout(function() {
+                statusElement.textContent = '';
+                statusElement.classList.remove('form-success-message');
+            }, 5000);
+        }
+    }
+
     function showFormError(message) {
         const statusElement = document.querySelector('#form-status');
         if (statusElement) {
             statusElement.textContent = message;
+            statusElement.classList.remove('form-success-message');
             statusElement.classList.add('form-error-message');
         }
     }

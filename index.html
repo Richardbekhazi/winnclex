@@ -255,7 +255,10 @@
             <div class="container fade-in">
                 <h2 class="section-title" data-en="Ready to Start?" data-fr="Prêt à Commencer?" data-ar="هل أنت مستعد للبدء؟">Ready to Start?</h2>
                 <p style="text-align:center; max-width: 600px; margin: 0 auto 3rem auto;" data-en="Contact us today to book your first session. Flexible online scheduling is available to fit your busy life." data-fr="Contactez-nous aujourd'hui pour réserver votre première session. Un calendrier en ligne flexible est disponible pour s'adapter à votre vie chargée." data-ar="اتصل بنا اليوم لحجز جلستك الأولى. يتوفر جدول زمني مرن عبر الإنترنت يناسب حياتك المشغولة.">Contact us today to book your first session. Flexible online scheduling is available to fit your busy life.</p>
-                <form class="contact-form" action="https://formspree.io/f/mbdaayak" method="POST" novalidate>
+                <form class="contact-form" action="https://api.web3forms.com/submit" method="POST" novalidate>
+                    <input type="hidden" name="access_key" value="acbc1f9e-078c-4249-b3fb-07a49a784c71">
+                    <input type="hidden" name="subject" value="New Contact from Global NCLEX Prep">
+                    <input type="checkbox" name="botcheck" class="hidden" style="display:none">
                     <div class="form-group">
                         <label for="name" data-en="Your Name" data-fr="Votre Nom" data-ar="اسمك">Your Name</label>
                         <input type="text" name="name" id="name" class="form-control" placeholder="Your Name" required aria-required="true" data-placeholder-en="Your Name" data-placeholder-fr="Votre Nom" data-placeholder-ar="اسمك">
@@ -263,7 +266,7 @@
                     </div>
                     <div class="form-group">
                         <label for="email" data-en="Your Email" data-fr="Votre Email" data-ar="بريدك الإلكتروني">Your Email</label>
-                        <input type="email" name="_replyto" id="email" class="form-control" placeholder="Your Email" required aria-required="true" data-placeholder-en="Your Email" data-placeholder-fr="Votre Email" data-placeholder-ar="بريدك الإلكتروني">
+                        <input type="email" name="email" id="email" class="form-control" placeholder="Your Email" required aria-required="true" data-placeholder-en="Your Email" data-placeholder-fr="Votre Email" data-placeholder-ar="بريدك الإلكتروني">
                         <span class="error-message" id="email-error" role="alert"></span>
                     </div>
                     <div class="form-group">
