@@ -195,12 +195,28 @@ document.addEventListener('DOMContentLoaded', function() {
     var cards = document.querySelectorAll('.testimonial-card');
     var prevBtn = document.querySelector('.testimonial-prev');
     var nextBtn = document.querySelector('.testimonial-next');
+    var dotsContainer = document.querySelector('.testimonial-dots');
     var currentSlide = 0;
+
+    // Build dot indicators
+    if (dotsContainer && cards.length > 0) {
+        cards.forEach(function(_, i) {
+            var dot = document.createElement('button');
+            dot.className = 'testimonial-dot' + (i === 0 ? ' active' : '');
+            dot.setAttribute('aria-label', 'Go to testimonial ' + (i + 1));
+            dot.addEventListener('click', function() { showSlide(i); });
+            dotsContainer.appendChild(dot);
+        });
+    }
 
     function showSlide(index) {
         cards.forEach(function(c) { c.classList.remove('active'); });
         currentSlide = (index + cards.length) % cards.length;
         cards[currentSlide].classList.add('active');
+        var dots = document.querySelectorAll('.testimonial-dot');
+        dots.forEach(function(d, i) {
+            d.classList.toggle('active', i === currentSlide);
+        });
     }
 
     if (prevBtn && nextBtn && cards.length > 0) {
