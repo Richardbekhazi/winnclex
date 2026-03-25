@@ -61,6 +61,59 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    // Hamburger Menu
+    const hamburger = document.querySelector('.nav-hamburger');
+    const mobileMenu = document.querySelector('.mobile-menu');
+    const mobileLinks = document.querySelectorAll('.mobile-nav-link');
+
+    function closeMobileMenu() {
+        if (hamburger && mobileMenu) {
+            hamburger.classList.remove('active');
+            hamburger.setAttribute('aria-expanded', 'false');
+            mobileMenu.classList.remove('open');
+            mobileMenu.setAttribute('aria-hidden', 'true');
+            document.body.classList.remove('menu-open');
+        }
+    }
+
+    if (hamburger && mobileMenu) {
+        hamburger.addEventListener('click', function() {
+            const isOpen = mobileMenu.classList.contains('open');
+            if (isOpen) {
+                closeMobileMenu();
+            } else {
+                hamburger.classList.add('active');
+                hamburger.setAttribute('aria-expanded', 'true');
+                mobileMenu.classList.add('open');
+                mobileMenu.setAttribute('aria-hidden', 'false');
+                document.body.classList.add('menu-open');
+            }
+        });
+
+        mobileLinks.forEach(function(link) {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                closeMobileMenu();
+                var targetId = this.getAttribute('href');
+                var targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    setTimeout(function() {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 60,
+                            behavior: 'smooth'
+                        });
+                    }, 300);
+                }
+            });
+        });
+
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && mobileMenu.classList.contains('open')) {
+                closeMobileMenu();
+            }
+        });
+    }
+
     // Sticky Header
     const header = document.querySelector('.header');
     if (header) {

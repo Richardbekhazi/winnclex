@@ -26,6 +26,13 @@
                 <li><a href="#contact" class="nav-link" data-en="Contact" data-fr="Contact" data-ar="تواصل معنا">Contact</a></li>
             </ul>
 
+            <!-- Hamburger -->
+            <button class="nav-hamburger" aria-label="Toggle menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
             <!-- Language Selector -->
             <div class="language-selector">
                 <button class="language-toggle" aria-label="Select Language" aria-haspopup="menu">
@@ -53,12 +60,17 @@
         </nav>
     </header>
 
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" aria-hidden="true">
+        <a href="#about" class="mobile-nav-link" data-en="About" data-fr="À Propos" data-ar="من نحن">About</a>
+        <a href="#topics" class="mobile-nav-link" data-en="Topics" data-fr="Sujets" data-ar="المحاور">Topics</a>
+        <a href="#testimonials" class="mobile-nav-link" data-en="Testimonials" data-fr="Témoignages" data-ar="آراء المتدربين">Testimonials</a>
+        <a href="#contact" class="mobile-nav-link" data-en="Contact" data-fr="Contact" data-ar="تواصل معنا">Contact</a>
+    </div>
+
     <main>
         <!-- Hero Section -->
         <section class="hero">
-            <div class="hero-bg">
-                <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=2070&auto=format&fit=crop" alt="" loading="eager" class="hero-bg-img">
-            </div>
             <div class="hero-content container">
                 <span class="hero-badge" data-en="The Strategic Path to Licensure" data-fr="Le Chemin Stratégique vers la Licence" data-ar="المسار الاستراتيجي نحو الترخيص">The Strategic Path to Licensure</span>
                 <h1 class="hero-title">
@@ -72,7 +84,6 @@
 
         <!-- Why Choose Us -->
         <section id="about" class="section about-section">
-            <div class="about-bg-grid"></div>
             <div class="container fade-in">
                 <div class="about-header">
                     <span class="section-label" data-en="Our Approach" data-fr="Notre Approche" data-ar="نهجنا">Our Approach</span>
@@ -80,14 +91,13 @@
                     <p class="section-subtitle" data-en="NCLEX success is more than memorization. It's about understanding the exam's logic. We specialize in teaching you the test-taking strategies, clinical reasoning, and question interpretation techniques that lead to confident and correct answers." data-fr="La réussite du NCLEX est plus que la mémorisation. C'est comprendre la logique de l'examen. Nous nous spécialisons dans l'enseignement des stratégies de test, du raisonnement clinique et des techniques d'interprétation des questions qui mènent à des réponses confiantes et correctes." data-ar="النجاح في NCLEX لا يقتصر على الحفظ؛ بل يعتمد على فهم منطق الامتحان. نعلمك استراتيجيات الاختبار والتفكير الإكلينيكي وتقنيات تفسير الأسئلة للوصول إلى إجابات صحيحة بثقة.">NCLEX success is more than memorization. It's about understanding the exam's logic. We specialize in teaching you the test-taking strategies, clinical reasoning, and question interpretation techniques that lead to confident and correct answers.</p>
                 </div>
                 <div class="features-grid">
-                    <div class="feature-card feature-card--wide">
+                    <div class="feature-card">
                         <div class="feature-card__inner">
                             <span class="feature-number">01</span>
                             <div class="feature-content">
                                 <h3 data-en="Decoding Complex Questions" data-fr="Décoder les Questions Complexes" data-ar="تحليل الأسئلة المعقدة">Decoding Complex Questions</h3>
                                 <p data-en="Master the art of breaking down NCLEX-style questions into clear, answerable components." data-fr="Maîtrisez l'art de décomposer les questions de style NCLEX en composants clairs et faciles à répondre." data-ar="أتقن فن تحليل أسئلة NCLEX إلى مكونات واضحة وقابلة للإجابة.">Master the art of breaking down NCLEX-style questions into clear, answerable components.</p>
                             </div>
-                            <div class="feature-line"></div>
                         </div>
                     </div>
                     <div class="feature-card feature-card--accent">
@@ -97,17 +107,15 @@
                                 <h3 data-en="Clinical Reasoning" data-fr="Raisonnement Clinique" data-ar="التفكير الإكلينيكي">Clinical Reasoning</h3>
                                 <p data-en="Applying clinical reasoning frameworks rooted in real-world nursing practice." data-fr="Appliquer les cadres de raisonnement clinique ancrés dans la pratique infirmière réelle." data-ar="تطبيق أطر التفكير الإكلينيكي المبنية على ممارسة التمريض الفعلية.">Applying clinical reasoning frameworks rooted in real-world nursing practice.</p>
                             </div>
-                            <div class="feature-line"></div>
                         </div>
                     </div>
-                    <div class="feature-card feature-card--tall">
+                    <div class="feature-card">
                         <div class="feature-card__inner">
                             <span class="feature-number">03</span>
                             <div class="feature-content">
                                 <h3 data-en="Prioritization Mastery" data-fr="Maîtrise de la Priorisation" data-ar="إتقان الأولويات">Prioritization Mastery</h3>
                                 <p data-en="Mastering prioritization and safety principles that the NCLEX tests relentlessly." data-fr="Maîtriser la priorisation et les principes de sécurité que le NCLEX teste sans relâche." data-ar="إتقان ترتيب الأولويات ومبادئ السلامة التي يختبرها NCLEX باستمرار.">Mastering prioritization and safety principles that the NCLEX tests relentlessly.</p>
                             </div>
-                            <div class="feature-line"></div>
                         </div>
                     </div>
                     <div class="feature-card">
@@ -117,12 +125,8 @@
                                 <h3 data-en="Confidence Building" data-fr="Renforcement de la Confiance" data-ar="بناء الثقة">Confidence Building</h3>
                                 <p data-en="Building unshakeable test-day confidence through practice and strategy." data-fr="Construire une confiance inébranlable le jour du test grâce à la pratique et la stratégie." data-ar="بناء ثقة قوية ليوم الاختبار من خلال الممارسة والاستراتيجية.">Building unshakeable test-day confidence through practice and strategy.</p>
                             </div>
-                            <div class="feature-line"></div>
                         </div>
                     </div>
-                </div>
-                <div class="language-support-badge">
-                    <p><strong data-en="Language support for:" data-fr="Support linguistique pour:" data-ar="دعم اللغات:">Language support for:</strong> English | Français | العربية</p>
                 </div>
             </div>
         </section>
@@ -311,6 +315,7 @@
                 <span class="footer-logo" data-en="Global NCLEX Prep" data-fr="Préparation NCLEX Mondiale" data-ar="التحضير الشامل لـ NCLEX">Global NCLEX Prep</span>
                 <p class="footer-disclaimer"><strong data-en="Disclaimer:" data-fr="Avertissement:" data-ar="تنصل:">Disclaimer:</strong> <span data-en="This is an independent educational coaching service and is not affiliated with the NCSBN® or NCLEX®. Our goal is to provide supplementary strategic coaching." data-fr="Il s'agit d'un service de coaching éducatif indépendant et n'est pas affilié à NCSBN® ou NCLEX®. Notre objectif est de fournir un coaching stratégique supplémentaire." data-ar="هذه خدمة تدريب تعليمي مستقلة وليست مرتبطة بـ NCSBN® أو NCLEX®. هدفنا هو توفير تدريب استراتيجي تكميلي.">This is an independent educational coaching service and is not affiliated with the NCSBN® or NCLEX®. Our goal is to provide supplementary strategic coaching.</span></p>
             </div>
+            <p class="footer-langs"><strong data-en="Language support:" data-fr="Support linguistique:" data-ar="دعم اللغات:">Language support:</strong> English | Français | العربية</p>
             <p class="footer-copy"><span data-en="© 2026 Global NCLEX Prep. All Rights Reserved." data-fr="© 2026 Préparation NCLEX Mondiale. Tous Droits Réservés." data-ar="© 2026 التحضير العالمي لـ NCLEX. جميع الحقوق محفوظة.">© 2026 Global NCLEX Prep. All Rights Reserved.</span></p>
         </div>
     </footer>
